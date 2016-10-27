@@ -1,0 +1,83 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+<!-- Pre header ad section -->
+
+<div class="row pre-header">
+		{{#get "posts" limit="3" filter="tags:ads"}}
+    		{{#foreach posts}}
+        		<div class="col-md-5 banner-ad" id="ad-space">
+        			<a class="ad-link-wrapper" href="{{get.content}}">
+        				<div class="ad-image col-md-6">
+  						<img src="{{image}}" width="100%" />
+  						</div>
+  						<div class="ad-content col-md-6">
+  						{{title}}
+  						</a>
+  					</div>
+  				</div>
+    		{{/foreach}}
+		{{/get}}
+		<div class="col-md-5" id="no-ads1">
+			no-ads
+		</div>
+		<div class="col-md-10" id="no-ads">
+			no-ads
+		</div>
+		<div class="listdivcount">
+
+		</div>
+
+	<div class="col-md-2 right">
+		{{#if @labs.subscribers}}
+        	<a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a>
+    		{{else}}
+        	<a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+    	{{/if}}
+	</div>
+</div>
+
+<!-- Pre-content header section -->
+<div class="row main-header">
+	<div class="col-md-2">
+		left side content
+	</div>
+	<div class="col-md-10">
+		<div class="row">
+			Main head
+		</div>
+		<div class="row">
+			Navigation
+		</div>
+	</div>
+</div>
+
+<!-- Main content area -->
+
+<div class="row">
+	<div class="col-md-9">
+		Article
+	</div>
+	<div class="col-md-3">
+		Sidebar
+	</div>
+</div>
+
+<!-- Post-content footer section -->
+
+<div class="row">
+	<div class="col-md-3">
+		Column 1
+	</div>
+	<div class="col-md-3">
+		Column 2
+	</div>
+	<div class="col-md-3">
+		Column 3
+	</div>
+	<div class="col-md-3">
+		Column 4
+	</div>
+</div>
+
+

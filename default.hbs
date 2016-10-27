@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" />
+     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    {{! Theme settings }}
+	<script type="text/javascript">
+		var disqus_shortname = 'mattaunger', // replace my_disqus_shortname with your shortname
+			instagram_username = 'MattMadeLife', // add your Instagram username
+			instagram_clientid = 'fd003ec588c4482dabd9d0f9c5c5390e', // add your Instagram client ID
+			latest_posts_count = 5; // change the latest posts number
+	</script>
+    
+
+	<!--[if lt IE 9]>
+	<script src="{{asset "js/html5.js"}}"></script>
+	<![endif]-->
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+
+
+<body>
+    <div class="container-fluid">
+
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+
+        <footer class="clearfix">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+    <script>
+    $( document ).ready(function() {
+        var divcount = $('#ad-space').length;
+        if(divcount==1){
+            $('#no-ads1').css('display','block')}
+        else if(divcount==0){
+            $('#no-ads').css('display','block')};
+        
+    });
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+#no-ads{
+	display:none;
+}
+#no-ads1{
+	display:none;
+}
+.banner-ad{
+	border:1px solid #000;
+	padding:0;
+}
+.ad-image{
+	vertical-align:top;
+	display:inline-block;
+}
+.ad-content{
+	display:inline-block;
+	text-align:right;
+}
