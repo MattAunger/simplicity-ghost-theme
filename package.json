@@ -1,0 +1,32 @@
+{
+    "name": "simplicity",
+    "description": "A lightweight, simple, minimal and responsive web theme.",
+    "demo": "https://mattaunger.co.uk",
+    "version": "0.0.1",
+    "engines": {
+        "ghost": ">=0.9.0 <1.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Matt Aunger",
+        "email": "matt@mattaunger.co.uk",
+        "url": "https://mattaunger.co.uk"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Personal Blogs"
+        ]
+    },
+    "keywords": [
+        "simplicity",
+        "theme"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MattAunger/simplicity-ghost-theme"
+    },
+    "bugs": "https://github.com/MattAunger/simplicity-ghost-theme/issues",
+    "contributors": "https://github.com/MattAunger/simplicity-ghost-theme/graphs/contributors"
+}

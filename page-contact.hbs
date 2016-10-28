@@ -1,0 +1,91 @@
+{{!< default}}
+
+{{!-- The comment above "< default" means - insert everything in this file into
+    the {{{body}}} of the default.hbs template, containing the blog header/footer. --}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+
+
+<!-- Pre-content header section -->
+<!-- Mobile-nav -->
+<div class="row mobile-nav hidden-md hidden-lg" id="mobile-nav">
+        <a href="#" class="nav-close" id="menu-close">
+            <span class="glyphicon glyphicon-remove white close" aria-hidden="true"></span>
+        </a>
+        {{navigation}}
+        <ul class="mobile-social-links">
+            <li class="social-icon" id="twitter">
+                <a href="https://twitter.com/MattMadeContent"><img src="{{asset "/social-icons/twitter.svg"}}" width="64px" height="64px" /></a>
+            </li>
+            <li class="social-icon" id="facebook">
+                <a href="https://www.facebook.com/MattMadeLife/"><img src="{{asset "/social-icons/facebook.svg"}}" width="64px" height="64px" /></a>
+            </li>
+            <li class="social-icon" id="linkedin">
+                <a href="https://www.linkedin.com/in/mattaunger"><img src="{{asset "/social-icons/linkedin.svg"}}" width="64px" height="64px" /></a>
+            </li>
+            <li class="social-icon" id="pinterest">
+                <a href="https://uk.pinterest.com/MattAunger/"><img src="{{asset "/social-icons/pinterest.svg"}}" width="64px" height="64px" /></a>
+            </li>
+            <li class="social-icon" id="instagram">
+                <a href="https://www.instagram.com/mattmadelife/"><img src="{{asset "/social-icons/instagram.svg"}}" width="64px" height="64px" /></a>
+            </li>
+        </ul>
+</div>
+<div class="row main-header">
+<a href="#" class="nav-close hidden-md hidden-lg" id="menu-open">
+        <span class="glyphicon glyphicon-menu-hamburger white hamburger" aria-hidden="true"></span>
+</a>
+    <!-- End mobile nav -->
+<div class="row main-header">
+    <div class="col-md-5 text-center social-links">
+        <ul class="hidden-sm hidden-xs">
+            <li class="social-icon" id="twitter">
+                <a href="https://twitter.com/MattMadeContent"><img src="{{asset "/social-icons/twitter.svg"}}" width="64px" height="64px" /></a>
+            </li>
+            <li class="social-icon" id="facebook">
+                <a href="https://www.facebook.com/MattMadeLife/"><img src="{{asset "/social-icons/facebook.svg"}}" width="64px" height="64px" /></a>
+            </li>
+            <li class="social-icon" id="linkedin">
+                <a href="https://www.linkedin.com/in/mattaunger"><img src="{{asset "/social-icons/linkedin.svg"}}" width="64px" height="64px" /></a>
+            </li>
+            <li class="social-icon" id="pinterest">
+                <a href="https://uk.pinterest.com/MattAunger/"><img src="{{asset "/social-icons/pinterest.svg"}}" width="64px" height="64px" /></a>
+            </li>
+            <li class="social-icon" id="instagram">
+                <a href="https://www.instagram.com/mattmadelife/"><img src="{{asset "/social-icons/instagram.svg"}}" width="64px" height="64px" /></a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-2 text-center">
+        <div class="logo">
+        {{#if @blog.logo}}
+        <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" width="1rem" /></a>
+        {{else}}
+        <a class="blog-logo href="{{@blog.url}}"><span class="logo-icon glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span></a>
+        {{/if}}
+        </div>
+    </div>
+    <div class="col-md-5 text-left">
+        {{navigation}}
+    </div>
+</div>
+</div>
+
+<!-- Main content area -->
+<div class="row main-content">
+    <div class="col-xs-12 col-md-12">
+        <div class="hero-image col-md-12" style="background-image:url('{{image}}');">
+            &nbsp;
+        </div>
+        <div class="blog-post-content col-md-8 col-md-offset-2">
+            <h1 class="blog-post-title">{{title}}</h1>
+            {{content}}
+            <!-- www.123contactform.com script begins here -->
+<script type="text/javascript" defer src="//www.123contactform.com/embed/2275383.js" data-role="form"></script>
+<p>Powered by <a class="footerLink13" title="123ContactForm" href="http://www.123contactform.com">123ContactForm</a> | <a style="font-size:small!important;color:#000000!important; text-decoration:underline!important;" title="Looks like phishing? Report it!" href="http://www.123contactform.com/sfnew.php?s=123contactform-52&control119314=http:///contact-form--2275383.html&control190=Report%20abuse" rel="nofollow">Report abuse</a></p><!-- www.123contactform.com script ends here -->
+        </div>
+    </div>
+</div>
+
+{{/post}}

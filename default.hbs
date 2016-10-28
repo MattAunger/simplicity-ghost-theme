@@ -42,9 +42,9 @@
         {{! Everything else gets inserted here }}
         {{{body}}}
 
-        <footer class="clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        <footer class="clearfix col-xs-12">
+            <div class="copyright col-xs-12 col-md-6 text-left"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</div>
+            <div class="poweredby col-xs-12 col-md-6 text-right">Proudly published with <a href="https://ghost.org">Ghost</a></div>
         </footer>
 
     </div>
@@ -62,7 +62,16 @@
             $('#no-ads').css('display','block')};
         
     });
-            
+    $( "#menu-open" ).click(function() {
+  $( "#mobile-nav" ).slideDown( "slow", function() {
+    // Animation complete.
+  });
+});
+    $( "#menu-close" ).click(function() {
+  $( "#mobile-nav" ).slideUp( "slow", function() {
+    // Animation complete.
+  });
+});
     </script>
 </body>
 </html>
