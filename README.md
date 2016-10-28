@@ -1,6 +1,6 @@
 # Simplicity
 
-A lightweight, responsive theme for [Ghost](http://github.com/tryghost/ghost/).
+A lightweight, responsive theme for [Ghost](http://github.com/tryghost/ghost/), built with Bootstrap.
 
 To download, visit the [releases](https://github.com/MattAunger/simplicity-ghost-theme/releases) page.
 
